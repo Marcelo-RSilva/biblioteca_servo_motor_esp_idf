@@ -4,6 +4,15 @@
 #include "esp_system.h"
 #include "esp_random.h"
 
+// Define constants for PWM
+#define SERVO_PWM_FREQUENCY 50 // PWM frequency in Hz
+#define SERVO_PWM_RESOLUTION LEDC_TIMER_13_BIT // PWM resolution
+#define SERVO_MIN_PULSE_WIDTH_US 500 // Minimum pulse width in microseconds
+#define SERVO_MAX_PULSE_WIDTH_US 2500 // Maximum pulse width in microseconds
+
+static const char *TAG = "servo";
+
+
 void app_main(void) {
   ServoConfig servo_config = {
     .gpio_num = 13, // Defina o GPIO que você está usando
