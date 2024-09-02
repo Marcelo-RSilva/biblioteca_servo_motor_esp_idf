@@ -75,7 +75,58 @@ Esta função obtém a angulação do braço.
 
 ## Arquivo servo_hw
 
-_____________
+### `esp_err_t hw_servo_init(uint8_t gpio_num)`
+
+**Descrição**:
+
+Prepara o pino GPIO para gerar sinais PWM, que são necessários para controlar o servo.
+
+**Retorno**:
+-  `esp_err_t` - Indica se a operação foi bem-sucedida ou ocorreu um erro.
+
+**Parâmetros**:
+- `uint8_t` - Um número inteiro sem sinal de 8 bits.
+- `gpio_num` - Indica o número do pino do GPIO.
+  
+**Por que é feito**:
+
+Prepara o pino GPIO e garante que ele esteja pronto para gerar sinais PWM corretamente.
+
+### `esp_err_t hw_servo_set_pulse_width(uint8_t gpio_num, uint32_t pulse_width_us)`
+
+**Descrição**:
+
+Ajusta a largura do pulso PWM, controlando a posição do servo motor.
+
+**Retorno**:
+- `esp_err_t` - Para indicar sucesso ou falha na operação.
+
+**Parâmetros**
+- `uint8_t` - Um número inteiro sem sinal de 8 bits.
+- `uint32_t` - Um número inteiro sem sinal de 32 bits.
+- `gpio_num` - Indica o número do pino do GPIO.
+- `pulse_width_us` - Define a largura do pulso PWM em microsegundos.
+
+**Por que é feito**:
+
+Controlar a largura do pulso é essencial para determinar a posição precisa do servomotor. Sem essa função, seria impossível mover o servo para o ângulo desejado.
+
+### `esp_err_t hw_servo_deinit(uint8_t gpio_num)`
+
+**Descrição**:
+
+Desativa o sinal PWM e libera os recursos associados, "limpando" as configurações anteriores.
+
+**Retorno**:
+- `esp_err_t` - Assim como as outras funções, indica o sucesso ou falha da operação.
+
+**Parâmetros**
+- `uint8_t` - Um número inteiro sem sinal de 8 bits.
+- `gpio_num` - Indica o número do pino do GPIO. 
+
+**Por que é feito**:
+
+Esta função é importante para liberar recursos do sistema e garantir que o pino GPIO não continue gerando sinais ou consumindo energia desnecessariamente após o servo não ser mais necessário.
 
 ## Esquemático
 
