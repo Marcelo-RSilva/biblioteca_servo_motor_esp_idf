@@ -130,7 +130,7 @@ Esta função é importante para liberar recursos do sistema e garantir que o pi
 
 ## Esquemático
 
-![Esquemático]
+![Esquemático](images/Schematic_ESP32_GS90.png)
 
 ## Máquina de estados
 
