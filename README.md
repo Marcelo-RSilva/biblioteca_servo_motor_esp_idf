@@ -134,11 +134,11 @@ Esta função é importante para liberar recursos do sistema e garantir que o pi
 
 ## Máquina de estados
 
-![Máquina de Estados]
+![Máquina de Estados](images/Maquina_de_estados.png)
 
 ## Diagrama de blocos 
 
-![Diagrama de blocos]
+![Diagrama de blocos](images/Diagrama_de_blocos.png)
 
 ## Protótipo
 
@@ -149,7 +149,7 @@ Esta função é importante para liberar recursos do sistema e garantir que o pi
 - [Antonio Roberto](https://github.com/antoniojunior2222)
 - [Aryelson Gonçalves](https://github.com/aryelson1)
 - [Clarissa Lucena](https://github.com/Clarissa-de-Lucena)
-- [Felipe Bras](https://github.com/felipebrazfb333) 
+- [Felipe Braz](https://github.com/felipebrazfb333) 
 - [Guilherme Santos](https://github.com/GuilhermexL)
 - [Marcelo Ribeiro](https://github.com/Marcelo-RSilva)
 
