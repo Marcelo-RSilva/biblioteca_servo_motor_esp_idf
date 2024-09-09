@@ -4,6 +4,7 @@
 #include "esp_err.h"
 #include "esp_log.h"
 #include "driver/ledc.h"
+#include "driver/gpio.h"
 
 // Inicializa o GPIO para a geração do sinal PWM usado no controle do servo
 esp_err_t hw_servo_init(uint8_t gpio_num); 
